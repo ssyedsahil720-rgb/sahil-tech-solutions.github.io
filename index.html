@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sahil Tech Solutions | Web, Projects & Digital Design</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0f0f0f;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Animated Background */
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:linear-gradient(45deg,#000000,#001f3f,#000000);
+    background-size:400% 400%;
+    animation:gradient 10s ease infinite;
+    z-index:-1;
+}
+
+@keyframes gradient{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Header */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    background:rgba(0,0,0,0.7);
+    backdrop-filter:blur(10px);
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#00bfff;
+    text-shadow:0 0 10px #00bfff;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00bfff;
+}
+
+/* Hero */
+.hero{
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:18px;
+    color:#ccc;
+    margin-bottom:30px;
+}
+
+.btn{
+    padding:12px 25px;
+    background:#00bfff;
+    border:none;
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:white;
+}
+
+/* Sections */
+section{
+    padding:80px 10%;
+}
+
+.services{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    padding:30px;
+    margin:10px;
+    width:30%;
+    border-radius:15px;
+    backdrop-filter:blur(10px);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px #00bfff;
+}
+
+/* Contact Form */
+form{
+    display:flex;
+    flex-direction:column;
+    max-width:400px;
+    margin:auto;
+}
+
+input, textarea{
+    margin:10px 0;
+    padding:10px;
+    border:none;
+    border-radius:5px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#000;
+    color:#777;
+}
+
+/* WhatsApp Button */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px;
+    border-radius:50%;
+    font-size:20px;
+    text-decoration:none;
+}
+
+@media(max-width:900px){
+    .card{
+        width:100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">STS | Sahil Tech Solutions</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero" id="home">
+    <h1>Building Your Digital Future</h1>
+    <p>Websites • Student Projects • Digital Designs</p>
+    <button class="btn" onclick="document.getElementById('contact').scrollIntoView();">
+        Get Started
+    </button>
+</div>
+
+<section id="services">
+    <h2 style="text-align:center; margin-bottom:40px;">Our Services</h2>
+
+    <div class="services">
+        <div class="card">
+            <h3>Website Development</h3>
+            <p>Modern and affordable websites for businesses and individuals.</p>
+        </div>
+
+        <div class="card">
+            <h3>Student Projects</h3>
+            <p>School & College projects with proper documentation.</p>
+        </div>
+
+        <div class="card">
+            <h3>Digital Designs</h3>
+            <p>Posters, social media designs, thumbnails & marketing materials.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2 style="text-align:center;">Contact Us</h2>
+
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="4" placeholder="Your Message"></textarea>
+        <button class="btn">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    © 2026 Sahil Tech Solutions | All Rights Reserved
+</footer>
+
+<a href="https://wa.me/917204458256" class="whatsapp" target="_blank">💬</a>
+
+</body>
+</html>
